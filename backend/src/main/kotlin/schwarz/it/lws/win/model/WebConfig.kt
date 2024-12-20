@@ -1,0 +1,18 @@
+package schwarz.it.lws.win.config
+
+import org.springframework.context.annotation.Configuration
+import org.springframework.web.servlet.config.annotation.CorsRegistry
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
+
+@Configuration
+class WebConfig : WebMvcConfigurer {
+    override fun addCorsMappings(registry: CorsRegistry) {
+        registry.addMapping("/api/**")
+            .allowedOrigins("http://localhost:5173")
+            .allowedMethods("GET", "POST", "PUT", "DELETE")
+    }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> d65976157d5658f8207d9f248298e3c3330ebb4e
